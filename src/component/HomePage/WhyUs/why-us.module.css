@@ -1,0 +1,10 @@
+.card {
+    width: 100%;
+    margin-top: -35px;
+}
+
+.card i {
+    width: 75px;
+    height: 75px;
+    background: #fff;
+}
