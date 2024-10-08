@@ -45,7 +45,7 @@ export function FindUs() {
             <h1>Where to find us?</h1>
             <div className="row ">
                 {array.map((item) => (
-                    <div key={item.id} className="col-md-4 p-2">
+                    <div key={item.id} className="col-md-4 p-2 ">
                         <div className={styles.cardContainer}>
                             <div className={styles.imageContainer}>
                                 <img

@@ -38,7 +38,7 @@ export function WhyUs() {
                 {array.map((item) => (
                     <div
                         key={item.id}
-                        className={` card col d-flex flex-column align-items-center`}
+                        className={` card col d-flex flex-column align-items-center shadow`}
                     >
                         <div
                             className={` ${style.card} d-flex justify-content-center align-items-center `}

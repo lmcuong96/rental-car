@@ -22,7 +22,7 @@ export function PeopleSay() {
                                         aria-valuemin="0"
                                         aria-valuemax="25"
                                     >
-                                        <div className="progress-bar w-25 bg-secondary"></div>
+                                        <div className="progress-bar w-25 bg-1"></div>
                                     </div>
                                     <div
                                         className="progress"
@@ -32,7 +32,7 @@ export function PeopleSay() {
                                         aria-valuemin="0"
                                         aria-valuemax="75"
                                     >
-                                        <div className="progress-bar w-75 bg-secondary"></div>
+                                        <div className="progress-bar w-75 bg-1"></div>
                                     </div>
                                     <div
                                         className="progress"
@@ -42,7 +42,7 @@ export function PeopleSay() {
                                         aria-valuemin="0"
                                         aria-valuemax="100"
                                     >
-                                        <div className="progress-bar w-100 bg-secondary"></div>
+                                        <div className="progress-bar w-100 bg-1"></div>
                                     </div>
                                     <div
                                         className="progress"
@@ -52,7 +52,7 @@ export function PeopleSay() {
                                         aria-valuemin="0"
                                         aria-valuemax="75"
                                     >
-                                        <div className="progress-bar w-75 bg-secondary"></div>
+                                        <div className="progress-bar w-75 bg-1"></div>
                                     </div>
                                 </div>
                             </div>

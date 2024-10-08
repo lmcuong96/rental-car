@@ -11,3 +11,12 @@
     position: relative;
     margin: 0 30px;
 }
+.bg-1 {
+    background-color: #5f5e5e;
+}
+.form-bg {
+    background-color: #8d8d8d;
+}
+.text-1 {
+    color: #424141;
+}

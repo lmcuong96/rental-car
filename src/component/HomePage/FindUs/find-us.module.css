@@ -4,6 +4,7 @@
     border-radius: 5px;
     margin-bottom: 20px;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .imageContainer {
