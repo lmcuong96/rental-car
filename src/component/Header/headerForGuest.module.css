@@ -1,0 +1,8 @@
+.vr {
+    width: 2px;
+    height: 300px;
+    background-color: #fff;
+    transform: rotate(30deg);
+    position: relative;
+    margin: 0 30px;
+}

@@ -5,6 +5,8 @@ import { Root } from "./page/Root";
 import { HeaderForGuest } from "./component/Header/HeaderForGuest";
 import { HeaderForCustomer } from "./component/Header/HeaderForCustomer";
 import { HeaderForCarOwner } from "./component/Header/HeaderForCarOwner";
+import { LoginAndSignup } from "./page/LoginAndSignup/LoginAndSignup";
+import { ResetPassword } from "./page/ResetPassword";
 
 function App() {
     const router = createHashRouter([
@@ -30,6 +32,18 @@ function App() {
                             element: <HeaderForCarOwner />,
                         },
                     ],
+                },
+                {
+                    path: "login",
+                    element: <LoginAndSignup />,
+                },
+                {
+                    path: "signup",
+                    element: <LoginAndSignup />,
+                },
+                {
+                    path: "forgotpassword",
+                    element: <ResetPassword />,
                 },
             ],
         },

@@ -1,0 +1,24 @@
+.vr {
+    width: 3px;
+    height: 600px;
+    background-color: #a7a5a5;
+    margin: 0 30px;
+}
+.hover-italic:hover {
+    font-style: italic;
+}
+.hidden {
+    display: none;
+}
+
+.active {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    opacity: 1;
+}
+
+.inactive {
+    transform: scale(0.85);
+    transition: transform 0.3s ease;
+    opacity: 0.5;
+}

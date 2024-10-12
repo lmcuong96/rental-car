@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import style from "./headerForGuest.module.css";
 export function HeaderForGuest() {
     const navigate = useNavigate();
     return (
@@ -17,7 +18,7 @@ export function HeaderForGuest() {
                     Find a Rental Car Near You
                 </button>
             </div>
-            <div className="vr"></div>
+            <div className={style.vr}></div>
             <div className="col ">
                 <h1>Are you a car owner?</h1>
                 <p className="fs-5">
