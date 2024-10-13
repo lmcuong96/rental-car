@@ -1,0 +1,14 @@
+@import "../Root/style.scss";
+
+.bg-1 {
+  background-color: $primary-color;
+}
+
+.search-form-123 {
+  padding-right: 10rem;
+  padding-left: 10rem;
+
+  button {
+    width: 10%;
+  }
+}
