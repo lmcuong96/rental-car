@@ -1,4 +1,4 @@
-import style from "./headerForCarOwner.module.css";
+import style from "./header-for-car-owner.module.css";
 export function HeaderForCarOwner() {
     const array = [
         {

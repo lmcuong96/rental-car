@@ -1,12 +1,14 @@
 import "./App.css";
 import { RouterProvider, createHashRouter } from "react-router-dom";
-import { Home } from "./page/Home";
-import { Root } from "./page/Root";
-import { HeaderForGuest } from "./component/Header/HeaderForGuest";
-import { HeaderForCustomer } from "./component/Header/HeaderForCustomer";
-import { HeaderForCarOwner } from "./component/Header/HeaderForCarOwner";
-import { LoginAndSignup } from "./page/LoginAndSignup/LoginAndSignup";
+import { Home } from "./page/home-page/Home.jsx";
+import { Root } from "./page/Root/Root.jsx";
+import { HeaderForGuest } from "./page/Root/Header/guest/header-for-guest.jsx";
+import { HeaderForCustomer } from "./page/Root/Header/customer/header-for-customer.jsx";
+import { HeaderForCarOwner } from "./page/Root/Header/car-owner/header-for-car-owner.jsx";
+import { LoginAndSignup } from "./page/login-and-signup/login-and-signup.jsx";
 import { ResetPassword } from "./page/ResetPassword";
+import {Search} from "./page/Search/search.jsx";
+
 
 function App() {
     const router = createHashRouter([
@@ -45,6 +47,10 @@ function App() {
                     path: "forgotpassword",
                     element: <ResetPassword />,
                 },
+                {
+                    path:"search",
+                    element:<Search/>
+                }
             ],
         },
     ]);

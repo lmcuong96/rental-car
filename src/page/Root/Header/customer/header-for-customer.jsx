@@ -18,7 +18,7 @@ export function HeaderForCustomer() {
                 <div className="form-bg border border-dark p-2 rounded shadow py-3 px-5">
                     <h3>Find the ideal car rental for your trip</h3>
                     <form>
-                        <label className="fs-5">PICK-Ulabel LOCATION</label>
+                        <label className="fs-5">PICK-UP LOCATION</label>
                         <input
                             type="text"
                             className="form-control border-dark"

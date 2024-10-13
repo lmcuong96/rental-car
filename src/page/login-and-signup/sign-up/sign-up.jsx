@@ -1,5 +1,5 @@
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import style from "./loginAndSignup.module.css";
+import style from "../login-and-signup.module.css";
 
 export function SignUp() {
     const navigate = useNavigate();

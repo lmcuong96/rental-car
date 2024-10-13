@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import { Footer } from "../component/Footer/Footer";
-import { MainNavigation } from "../component/NavBar/MainNavigation";
+import { Footer } from "./Footer/Footer.jsx";
+import { MainNavigation } from "./nav-bar/main-navigation.jsx";
 import { useLocation } from "react-router-dom";
 export function Root() {
     return (
