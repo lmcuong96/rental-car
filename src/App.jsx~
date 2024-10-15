@@ -6,7 +6,7 @@ import { HeaderForGuest } from "./page/Root/Header/guest/header-for-guest.jsx";
 import { HeaderForCustomer } from "./page/Root/Header/customer/header-for-customer.jsx";
 import { HeaderForCarOwner } from "./page/Root/Header/car-owner/header-for-car-owner.jsx";
 import { LoginAndSignup } from "./page/login-and-signup/login-and-signup.jsx";
-import { ResetPassword } from "./page/reset-password-page/ResetPassword.jsx";
+import { ResetPassword } from "./page/ResetPassword";
 import {Search} from "./page/Search/search.jsx";
 
 

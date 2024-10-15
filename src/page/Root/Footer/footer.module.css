@@ -1,12 +1,12 @@
 .custom-link {
     transition: font-size 0.3s ease, text-decoration 0.3s ease;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .custom-link:hover {
     text-decoration: underline;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
 }
 footer > ul {
     gap: 90px;

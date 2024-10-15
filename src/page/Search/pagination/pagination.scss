@@ -1,0 +1,31 @@
+.pagination {
+  align-items: center;
+  margin: 0;
+  li {
+    a {
+      border: 0px;
+      color: black;
+    }
+
+    a:hover {
+      background-color: dodgerblue;
+      color: white;
+    }
+  }
+
+}
+.select-page-243 {
+  display: flex;
+  gap: 10px;
+  width: 10%;
+  justify-content: space-between;
+  align-items: center;
+
+  select {
+    width: 50%;
+    height: 40px;
+  }
+  p {
+    margin: 0;
+  }
+}

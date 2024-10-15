@@ -6,14 +6,23 @@ import "./search-form.scss"
 import {DropOffComp} from "./drop-off-comp/drop-off-comp.jsx";
 export const SearchForm = () => {
     const [error, setError] = useState();
+    const [searchVal, setSearchVal] = useState({});
     const pickUpLocationLine = PickUpLocationComp();
     const pickUpDateAndTimeLine = PickUpComp();
     const dropOffComp= DropOffComp();
 
     const formControls = combineFormControls([pickUpLocationLine.formControl,
             pickUpDateAndTimeLine.formControl, dropOffComp.formControl]);
-
+    const handleClick = (formControls) => {
+        if (formControls.invalid) {
+            setError(formControls.showErrors())
+        } else {
+            setError("");
+            setSearchVal(JSON.parse(formControls.json()))
+        }
+    }
     return {
+        searchVal,
 
         render: () => <>
 
@@ -34,14 +43,7 @@ export const SearchForm = () => {
                     </div>
                 </div>
                 <div className="controls">
-                    <button onClick={() => {
-                        if (formControls.invalid) {
-                            setError(formControls.showErrors())
-                        } else {
-                            setError("");
-                            alert(formControls.json())
-                        }
-                    }}
+                    <button onClick={() => handleClick(formControls)}
                             className={"btn btn-primary my-4 py-2  mx-auto d-flex justify-content-center border-dark"}>
                         SEARCH
                     </button>

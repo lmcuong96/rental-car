@@ -1,4 +1,7 @@
+import {useNavigate} from "react-router-dom";
+
 export function HeaderForCustomer() {
+    const navigate = useNavigate();
     return (
         <div className="bg-1 d-flex justify-content-between align-items-center mx-auto text-light text-center px-4">
             <div className="col my-4 text-start align-self-start">
@@ -68,7 +71,9 @@ export function HeaderForCustomer() {
                                 </div>
                             </div>
                         </div>
-                        <button className="btn btn-primary my-3 w-50 mx-auto d-flex justify-content-center border-dark">
+                        <button
+                            onClick={()=> navigate('/search')}
+                            className="btn btn-primary my-3 w-50 mx-auto d-flex justify-content-center border-dark">
                             SEARCH
                         </button>
                     </form>
