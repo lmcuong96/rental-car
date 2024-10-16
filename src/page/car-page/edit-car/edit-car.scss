@@ -1,0 +1,63 @@
+.edit-car-nav-23r {
+  background-color: #ffffff;
+  margin: 10px 20px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: font-size 0.3s ease, text-decoration 0.3s ease;
+
+  }
+
+  a:hover {
+    color: blue;
+    font-size: 1.3rem;
+    text-decoration: underline;
+  }
+}
+
+.edit-car-container-12s {
+  width: 95%;
+  margin: 0 auto;
+
+  .edit-car-content-sa1 {
+    width: 90%;
+    margin: 2rem auto;
+  }
+
+  .edit-car-content-main {
+    border: 1px solid #000000;
+    margin: 2rem 0;
+    .basic-info-xzc {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      width: 50%;
+      font-weight: bold;
+      padding: 10px 30px;
+
+    }
+      .basic-info-doc-zxc {
+        padding: 10px 30px;
+        width: 50%;
+      }
+    .edit-car-tabs {
+      margin-top: -1.7rem;
+      button {
+        padding: 0 5px;
+      }
+       button:first-child {
+        border-bottom: 2px solid white;
+      }
+      button:nth-child(2) {
+        border-left: none;
+        border-right: none;
+      }
+    }
+  }
+}
