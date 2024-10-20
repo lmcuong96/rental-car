@@ -1,8 +1,11 @@
-export function BasicInfo() {
-    return (
+import {consumeContext, cs} from "cs-react";
+
+export const BasicInfo = () => cs(
+    consumeContext('car'),
+    ({car}) => (
         <>
             <div className={"basic-info-left-xzc"}>
-                <p>License plates: <span></span></p>
+                <p>License plates: <span>{car.id}</span></p>
                 <p>Brand name: <span></span></p>
                 <p>Production year: <span></span></p>
                 <p>Transmission: <span></span></p>
@@ -13,6 +16,5 @@ export function BasicInfo() {
                 <p>No. of seats: <span></span></p>
                 <p>Fuel:<span></span></p>
             </div>
-        </>
-    )
-}
+        </>)
+)

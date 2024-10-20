@@ -53,7 +53,7 @@ function App() {
                     element:<Search/>
                 },
                 {
-                    path:"edit-car",
+                    path:"edit-car/:id",
                     element:<EditCar/>
                 }
             ],

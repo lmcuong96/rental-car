@@ -19,3 +19,20 @@ export const EditCarContainerMain = () => {
 
     )
 }
+// import { cs, useContext } from "cs-react";
+//
+// export function EditCarContainerMain() {
+//     return cs({
+//         render: () => {
+//             const car = useContext("carContext"); // Lấy dữ liệu car từ context
+//             return (
+//                 <div>
+//                     <h2>Edit Details for: {car.name}</h2>
+//                     <p>Model: {car.model}</p>
+//                     <p>Year: {car.year}</p>
+//                     {/* Các trường khác */}
+//                 </div>
+//             );
+//         }
+//     });
+// }
