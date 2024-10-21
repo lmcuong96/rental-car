@@ -8,7 +8,7 @@ import { HeaderForCarOwner } from "./page/Root/Header/car-owner/header-for-car-o
 import { LoginAndSignup } from "./page/login-and-signup/login-and-signup.jsx";
 import { ResetPassword } from "./page/reset-password-page/ResetPassword.jsx";
 import {Search} from "./page/Search/search.jsx";
-import EditCar from "./page/car-page/edit-car/edit-car.jsx";
+import {EditCar} from "./page/car-page/edit-car/edit-car.jsx";
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
                             element: <HeaderForCustomer />,
                         },
                         {
-                            path: "cars-owner",
+                            path: "car-owner",
                             element: <HeaderForCarOwner />,
                         },
                     ],
@@ -53,7 +53,7 @@ function App() {
                     element:<Search/>
                 },
                 {
-                    path:"edit-detail/:id",
+                    path:"edit-car/:id",
                     element:<EditCar/>
                 }
             ],
