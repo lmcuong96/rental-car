@@ -1,6 +1,6 @@
 import "./search.scss"
 import {SearchForm} from "./search-form/search-form.jsx";
-import MiniNav from "../Root/nav-bar/mini-nav/mini-nav.jsx";
+import {MiniNav} from "../Root/nav-bar/mini-nav/mini-nav.jsx";
 import {SelectOption} from "./select-option/select-option.jsx";
 import {CarItems} from "./car-items/car-items.jsx";
 import {Pagination} from "./pagination/pagination.jsx";

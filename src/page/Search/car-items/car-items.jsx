@@ -10,7 +10,7 @@ export const CarItems = () => {
                  }) => {
             const carouselId = `carouselExampleIndicators-${id}`;  // Tạo id duy nhất
             return (
-                <div className={'row row-cols-2 w-100 border border-black my-2 mx-1'}>
+                <div className={'row row-cols-2 w-100 border border-black my-2 mx-auto'}>
                     {carItemsSlide.render({ img1, img2, img3, carouselId })}  {/* Truyền id duy nhất */}
                     {carItemsContent.render({ name, price, location })}
                 </div>

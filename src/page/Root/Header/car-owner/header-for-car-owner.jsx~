@@ -20,7 +20,7 @@ export function HeaderForCarOwner() {
             i: <i className={`fa-regular fa-circle-check fs-2 `} />,
             title: "You decide the price",
             description:
-                "When you list a cars you decide the price. We can help with recommendations as to price, but iltimately you decide!",
+                "When you list a car you decide the price. We can help with recommendations as to price, but iltimately you decide!",
         },
         {
             id: 4,
@@ -41,7 +41,7 @@ export function HeaderForCarOwner() {
             i: <i className={`fa-regular fa-credit-card fs-2 `} />,
             title: "Set payment",
             description:
-                "We pay you once a month and you can always view how much your cars has earned under your userr profile.",
+                "We pay you once a month and you can always view how much your car has earned under your userr profile.",
         },
     ];
     return (

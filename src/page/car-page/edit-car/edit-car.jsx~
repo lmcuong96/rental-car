@@ -9,6 +9,8 @@ import {useState} from "react";
 
 const EditCar = () => {
     const {id} = useParams();
+    console.log(cars.find(c => (c.id).toString() === id));
+
     const carData = cars.find(c => (c.id).toString() === id);
     const [car, setCar] = useState(carData); // Sử dụng useState để tạo state cho car
     const carItem = CarItems();

@@ -1,0 +1,28 @@
+.edit-car-content-main {
+  border: 1px solid #000000;
+  margin: 2rem 0;
+position: relative;
+  .edit-car-tabs {
+    margin-top: -1.61rem;
+    margin-left: -0.01rem;
+    button {
+      padding: 0 5px;
+    }
+    button:nth-child(2) {
+      border-left: none;
+      border-right: none;
+    }
+  }
+}
+.edit-car-tabs {
+  button {
+    position: relative;
+    background-color: #ccc;
+
+    &.active {
+      border-bottom: 2px solid white;
+      background-color: #fff;
+
+    }
+  }
+}

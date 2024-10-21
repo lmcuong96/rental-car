@@ -1,13 +1,13 @@
 import {MiniNav} from "../../Root/nav-bar/mini-nav/mini-nav.jsx";
 import "./add-car.scss"
 import {CarItems} from "../../Search/car-items/car-items.jsx";
-import {bookingCar} from "../../../../database/booking-car.js";
+import {cars} from "../../../../database/cars.js";
 
 export function AddCar() {
     // const carItem = CarItems()
     const miniNav = [
-        {content: "Home", link: "/car"},
-        {content: "My Car", link: "/my-car"},
+        {content: "Home", link: "/cars"},
+        {content: "My Car", link: "/my-cars"},
         {content: "Edit Details", link: "/edit-detail"}
     ]
     return (
@@ -18,13 +18,13 @@ export function AddCar() {
             <h1>Edit car details</h1>
             {/*<div>*/}
             {/*    {carItem.render({*/}
-            {/*        name: bookingCar[0].name,*/}
-            {/*        img1: bookingCar[0].img1,*/}
-            {/*        img2: bookingCar[0].img2,*/}
-            {/*        img3: bookingCar[0].img3,*/}
-            {/*        price: bookingCar[0].price,*/}
-            {/*        location: bookingCar[0].location,*/}
-            {/*        id: bookingCar[0].id*/}
+            {/*        name: cars[0].name,*/}
+            {/*        img1: cars[0].img1,*/}
+            {/*        img2: cars[0].img2,*/}
+            {/*        img3: cars[0].img3,*/}
+            {/*        price: cars[0].price,*/}
+            {/*        location: cars[0].location,*/}
+            {/*        id: cars[0].id*/}
             {/*    })}*/}
             {/*</div>*/}
         </>

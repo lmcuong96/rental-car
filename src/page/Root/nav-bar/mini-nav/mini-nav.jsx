@@ -1,11 +1,12 @@
 import {NavLink} from "react-router-dom";
 
-export const MiniNav = ({contents, links}) => {
+ const MiniNav = ({contents, links,index,lastElement}) => {
     const isActive = ({isActive}) => isActive ? "underline text-primary" : "";
     return (
         < >
             <NavLink className={isActive} to={links}>{contents}</NavLink>
-            <i className="fa-solid fa-chevron-right"></i>
+            {index !== lastElement && <i className="fa-solid fa-chevron-right"></i>}
         </>
     )
 }
+export default MiniNav

@@ -6,7 +6,7 @@ export function WhyUs() {
             id: 1,
             title: "Save money",
             description:
-                "We have no setup or registration fees. You are only charged wen you rent a car. So get started for FREE!",
+                "We have no setup or registration fees. You are only charged wen you rent a cars. So get started for FREE!",
             i: "fa-regular fa-money-bill-1",
         },
         {

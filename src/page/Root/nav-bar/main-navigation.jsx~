@@ -11,7 +11,7 @@ export function MainNavigation() {
                             className=" d-flex gap-3 align-items-center text-light text-decoration-none fs-1"
                         >
                             <i className="fa-solid fa-car"></i>
-                            <p>Rent a cars today!</p>
+                            <p>Rent a car today!</p>
                         </NavLink>
                     </li>
                     <li className="border-end border-start col-2 fs-5 d-flex align-items-center justify-content-center">
