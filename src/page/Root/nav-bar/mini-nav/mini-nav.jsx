@@ -1,6 +1,6 @@
 import {NavLink} from "react-router-dom";
 
- const MiniNav = ({contents, links,index,lastElement}) => {
+const MiniNav = ({contents, links,index,lastElement}) => {
     const isActive = ({isActive}) => isActive ? "underline text-primary" : "";
     return (
         < >
