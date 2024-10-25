@@ -1,12 +1,10 @@
 import {useState} from "react";
 import ImageItem from "./image-item/image-item.jsx";
 import "./images-coms.scss"
-import {useCar} from "../../../common/car-context.jsx";
 import {consumeContext, cs} from "cs-react";
 
 export const ImagesComs = () => {
-    const carData = useCar();
-    const [car, setCar] = useState(carData);
+    const [car, setCar] = useState();
 
     const handleDelete = (imageIndex) => {
         setCar(prevCar => {

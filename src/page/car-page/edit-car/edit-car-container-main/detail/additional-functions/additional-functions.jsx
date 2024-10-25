@@ -1,4 +1,5 @@
 import {consumeContext, cs} from "cs-react";
+import {Checkbox} from "../../common/checkbox/checkbox.jsx";
 
 export function AdditionalFunction() {
     return cs(
@@ -16,89 +17,53 @@ export function AdditionalFunction() {
                     <p className="fs-5 fw-bold">Additional functions:</p>
                     <div className="d-flex justify-content-between">
                         <div>
-                            <div>
+                            <div className={"d-flex justify-content between gap-2 align-items-center"}>
                                 <i className="fa-brands fa-bluetooth"></i>
-                                <label htmlFor="Bluetooth">Bluetooth</label>
-                                <input
-                                    type="checkbox"
-                                    id="Bluetooth"
-                                    checked={car.functionsBluetooth}
-                                    onChange={() => handleCheckboxChange(car.functionsBluetooth)}
-                                />
+                                <label>Bluetooth</label>
+                                <Checkbox car={car} field="functionsBluetooth"/>
                             </div>
-                            <div>
+                            <div className={"d-flex justify-content between gap-2 align-items-center"}>
                                 <i className="fa-solid fa-map"></i>
                                 <label htmlFor="GPS">GPS</label>
-                                <input
-                                    type="checkbox"
-                                    id="GPS"
-                                    checked={car.functionsGPS}
-                                    onChange={() => handleCheckboxChange(car.functionsGPS)}
-                                />
+                                <Checkbox car={car} field="functionsGPS"/>
+
                             </div>
-                            <div>
+                            <div className={"d-flex justify-content between gap-2 align-items-center"}>
                                 <i className="fa-solid fa-camera"></i>
                                 <label htmlFor="Camera">Camera</label>
-                                <input
-                                    type="checkbox"
-                                    id="Camera"
-                                    checked={car.functionsCamera}
-                                    onChange={() => handleCheckboxChange(car.functionsCamera)}
-                                />
+                                <Checkbox car={car} field="functionsCamera"/>
+
                             </div>
                         </div>
                         <div>
-                            <div>
+                            <div className={"d-flex justify-content between gap-2 align-items-center"}>
                                 <i className="fa-solid fa-sun"></i>
                                 <label htmlFor="Sunroof">Sun roof</label>
-                                <input
-                                    type="checkbox"
-                                    id="Sunroof"
-                                    checked={car.functionsSunRoof}
-                                    onChange={() => handleCheckboxChange(car.functionsSunRoof)}
-                                />
+                                <Checkbox car={car} field="functionsSunRoof"/>
+
                             </div>
-                            <div>
+                            <div className={"d-flex justify-content between gap-2 align-items-center"}>
                                 <i className="fa-solid fa-lock-open"></i>
                                 <label htmlFor="Child lock">Child lock</label>
-                                <input
-                                    type="checkbox"
-                                    id="Child lock"
-                                    checked={car.functionsChildLock}
-                                    onChange={() => handleCheckboxChange(car.functionsChildLock)}
-                                />
+                                <Checkbox car={car} field="functionsChildLock"/>
+
                             </div>
-                            <div>
+                            <div className={"d-flex justify-content between gap-2 align-items-center"}>
                                 <i className="fa-solid fa-child-reaching"></i>
                                 <label htmlFor="Child seat">Child seat</label>
-                                <input
-                                    type="checkbox"
-                                    id="Child seat"
-                                    checked={car.functionsChildSeat}
-                                    onChange={() => handleCheckboxChange('functionsChildSeat')}
-                                />
+                                <Checkbox car={car} field="functionsChildSeat"/>
                             </div>
                         </div>
                         <div>
-                            <div>
+                            <div className={"d-flex justify-content between gap-2 align-items-center"}>
                                 <i className="fa-solid fa-compact-disc"></i>
                                 <label htmlFor="DVD">DVD</label>
-                                <input
-                                    type="checkbox"
-                                    id="DVD"
-                                    checked={car.functionsDVD}
-                                    onChange={() => handleCheckboxChange('functionsDVD')}
-                                />
+                                <Checkbox car={car} field="functionsDVD"/>
                             </div>
-                            <div>
+                            <div className={"d-flex justify-content between gap-2 align-items-center"}>
                                 <i className="fa-brands fa-usb"></i>
                                 <label htmlFor="USB">USB</label>
-                                <input
-                                    type="checkbox"
-                                    id="USB"
-                                    checked={car.functionsUSB}
-                                    onChange={() => handleCheckboxChange('functionsUSB')}
-                                />
+                                <Checkbox car={car} field="functionsUSB"/>
                             </div>
                         </div>
                     </div>

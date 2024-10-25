@@ -8,7 +8,6 @@ import {cars} from "../../../database/cars.js";
 
 export function Search() {
     const searchForm = SearchForm();
-// console.log(searchForm.searchVal);
 
     const selectOption = SelectOption();
 

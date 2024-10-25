@@ -12,13 +12,13 @@ export const EditCarContainerMain = () => {
             case 'basicInfo':
                 return (
                     <div >
-                        {/*<Info />*/}
+                        <Info />
                     </div>
                 );
             case 'detail':
                 return (
                     <div>
-                        {/*<Detail />*/}
+                        <Detail />
                     </div>
                 );
             case 'pricing':
@@ -54,7 +54,7 @@ export const EditCarContainerMain = () => {
                     Pricing
                 </button>
             </div>
-            {renderContent()} {/* Gọi hàm để hiển thị nội dung tương ứng */}
+            {renderContent()}
         </div>
     );
 };

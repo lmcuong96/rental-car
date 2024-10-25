@@ -9,8 +9,7 @@ import {useState} from "react";
 
 const EditCar = () => {
     const {id} = useParams();
-    const carData = cars.find(c => (c.id).toString() === id);
-    const [car, setCar] = useState(carData); // Sử dụng useState để tạo state cho car
+    const car = cars.find(c => (c.id).toString() === id);
     const carItem = CarItems();
     const miniNav = [
         {content: "Home", link: "/cars"},
@@ -19,7 +18,7 @@ const EditCar = () => {
     ];
 
     return cs(
-        ({}, next) => provideContext("car", { car, setCar }, next), // Cung cấp cả car và setCar
+        ({}, next) => provideContext("car", car, next),
         consumeContext("car"),
         ({ car }) => (
             <>

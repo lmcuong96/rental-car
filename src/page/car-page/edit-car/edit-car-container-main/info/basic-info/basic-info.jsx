@@ -1,4 +1,3 @@
-import {useCar} from "../../../common/car-context.jsx";
 import {consumeContext, cs} from "cs-react";
 
 export const BasicInfo = () => cs(
