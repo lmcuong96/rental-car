@@ -1,17 +1,20 @@
-import {cs, State} from "cs-react";
+import {bindInput, cs, State} from "cs-react";
 
-export const Checkbox = ({car, field}) => {
-    return cs(
-        ["checkbox", ({}, next) => State({initValue: car[field], next})],
-        ({checkbox}) => {
-            // console.log(field + " " + checkbox.value);
-            return (
+export const Checkbox = ({ field,next}) => cs(
+        ["checkbox", ({}, next) => State({initValue: field, next})],
+        ({checkbox}) => next({
+            render: () => (
                 <>
-                    <input type="checkbox" name={field} id={field}
-                           checked={checkbox.value}
-                           onChange={(e) => checkbox.onChange(e.target.checked)}/>
+                    <input
+                        {...{
+                            type: "checkbox",
+                            // name: field,
+                            // id: field,
+                            checked:checkbox.value,
+                            onChange: (e)=> checkbox.onChange(e.currentTarget.checked),
+                        }}/>
                 </>
-            )
-        }
+            ),
+            value: checkbox.value
+        })
     )
-}

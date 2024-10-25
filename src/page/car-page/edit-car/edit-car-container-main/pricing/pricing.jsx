@@ -7,16 +7,16 @@ import {Checkbox} from "../common/checkbox/checkbox.jsx";
 
 export const Pricing = () => {
 
-    // const basePrice = BasePrice({car: consumeContext("car")})
-    // console.log(basePrice);
-
     return cs(
         consumeContext("car"),
         ["basePrice", ({car}, next) => BasePrice({car, next})],
-
-        ({basePrice}) => {
-            console.log(basePrice);
-
+        ['requiredDeposit', ({car}, next) => RequiredDeposit({car, next})],
+        ['noSmoking', ({car}, next) => Checkbox({field: car.noSmoking, next})],
+        ['noPets', ({car}, next) => Checkbox({field: car.noPet, next})],
+        ['noFoodInCar', ({car}, next) => Checkbox({field: car.noFoodInCar, next})],
+        ['other', ({car}, next) => Checkbox({field: car.other,next})],
+        ({basePrice, requiredDeposit, noSmoking, noPets, noFoodInCar, other}) => {
+            console.log(noSmoking);
             return (
                 <div>
                     <form className={"pricing-123sa"}>
@@ -32,11 +32,10 @@ export const Pricing = () => {
                             </div>
                             <div className={"d-flex flex-column  justify-content-between gap-3 my-5 fw-semibold"}>
                                 <div>
-                                    {/*<BasePrice car={car}/>*/}
                                     {basePrice.render()}
                                 </div>
                                 <div>
-                                    {/*<RequiredDeposit car={car}/>*/}
+                                    {requiredDeposit.render()}
                                 </div>
                             </div>
                         </div>
@@ -45,26 +44,22 @@ export const Pricing = () => {
                             <div className={"term-of-use-sad2"}>
                                 <div>
                                     <div>
-                                        {/*<Checkbox car={car} field={"noSmoking"}/>*/}
+                                        {noSmoking.render()}
                                         <label>No smoking</label>
-
                                     </div>
                                     <div>
-                                        {/*<Checkbox car={car} field={"noPet"}/>*/}
+                                        {noPets.render()}
                                         <label>No pets</label>
-
                                     </div>
                                 </div>
                                 <div>
                                     <div>
-                                        {/*<Checkbox car={car} field={"noFoodInCar"}/>*/}
+                                        {noFoodInCar.render()}
                                         <label>No food in cars</label>
-
                                     </div>
                                     <div>
-                                        {/*<Checkbox car={car} field={"other"}/>*/}
+                                        {other.render()}
                                         <label>Other</label>
-
                                     </div>
                                 </div>
                             </div>
@@ -77,7 +72,6 @@ export const Pricing = () => {
                         </div>
                     </form>
                 </div>
-
             )
         }
     )

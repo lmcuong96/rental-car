@@ -6,14 +6,16 @@ export const MileageAndFuel = () => {
 
     return cs(
         consumeContext("car"),
-        ({car}) => {
+        ['mileage', ({car}, next) => Mileage({mileage: car.mileage, next})],
+        ['fuelConsumption', ({car}, next) => Mileage({fuelConsumption: car.fuelConsumption, next})],
+        ({ mileage, fuelConsumption}) => {
             return (
                 <>
                     <div className={"d-flex flex-column fw-bold col"}>
-                        <Mileage car={car}/>
+                        {mileage.render()}
                     </div>
                     <div className={"d-flex flex-column fw-bold col"}>
-                        <FuelConsumption car={car}/>
+                        {fuelConsumption.render()}
                     </div>
                 </>
             )

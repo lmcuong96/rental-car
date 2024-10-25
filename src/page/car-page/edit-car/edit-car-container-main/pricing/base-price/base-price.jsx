@@ -4,8 +4,7 @@ export const BasePrice = ({car, next}) => cs(
     ["basePrice", ({}, next) => State({initValue: car.basePrice, next})],
     ({basePrice}) => next({
         render: () => (
-            <div>
-                <label htmlFor="base-price">Base price:</label>
+            <>
                 <input {...{
                     type: "text",
                     name: "base-price",
@@ -14,7 +13,8 @@ export const BasePrice = ({car, next}) => cs(
                     // value: basePrice.value,
                     // onChange: (e) => basePrice.onChange(e.target.value),
                 }}/>
-            </div>
+                <span>VND/day</span>
+            </>
         ),
         value: basePrice.value, //car.basePrice
     }),

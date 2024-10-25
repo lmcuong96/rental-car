@@ -1,16 +1,19 @@
-import {cs, State} from "cs-react";
+import {bindInput, cs, State} from "cs-react";
 
-export const RequiredDeposit = ({car}) => {
-    return cs(
-        ["requiredDeposit", ({}, next) => State({initValue: car.requiredDeposit, next})],
-        ({requiredDeposit}) => (
-            <>
-                <input type="text" name="required-depsit" id="required-depsit"
-                       className={"w-50 mx-5"}
-                       value={requiredDeposit.value}
-                       onChange={(e) => requiredDeposit.onChange(e.target.value)}/>
+export const RequiredDeposit = ({car, next}) => cs(
+    ["requiredDeposit", ({}, next) => State({initValue: car.requiredDeposit, next})],
+    ({requiredDeposit}) => next(
+        {
+            render: () => (<>
+                <input {...{
+                    type: "text",
+                    name: "required-deposit",
+                    id: "required-deposit",
+                    ...bindInput(requiredDeposit),
+                }}/>
                 <span>VND</span>
-            </>
-        )
-    );
-}
+            </>),
+            value: requiredDeposit.value
+        }
+    )
+);

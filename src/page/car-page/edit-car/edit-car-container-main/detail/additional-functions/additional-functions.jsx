@@ -4,13 +4,24 @@ import {Checkbox} from "../../common/checkbox/checkbox.jsx";
 export function AdditionalFunction() {
     return cs(
         consumeContext('car'),
-        ({car, setCar}) => {
-            const handleCheckboxChange = (key) => {
-                setCar(prevState => ({
-                    ...prevState,
-                    [key]: !prevState[key],
-                }));
-            };
+        ['functionsBluetooth', ({car}, next) => Checkbox({field: car.functionsBluetooth, next})],
+        ['functionsGPS', ({car}, next) => Checkbox({field: car.functionsGPS, next})],
+        ['functionsCamera', ({car}, next) => Checkbox({field: car.functionsCamera, next})],
+        ['functionsSunRoof', ({car}, next) => Checkbox({field: car.functionsSunRoof, next})],
+        ['functionsChildLock', ({car}, next) => Checkbox({field: car.functionsChildLock, next})],
+        ['functionsChildSeat', ({car}, next) => Checkbox({field: car.functionsChildSeat, next})],
+        ['functionsDVD', ({car}, next) => Checkbox({field: car.functionsDVD, next})],
+        ['functionsUSB', ({car}, next) => Checkbox({field: car.functionsUSB, next})],
+        ({
+             functionsBluetooth,
+             functionsGPS,
+             functionsCamera,
+             functionsSunRoof,
+             functionsChildLock,
+             functionsChildSeat,
+             functionsDVD,
+             functionsUSB
+         }) => {
 
             return (
                 <>
@@ -20,50 +31,46 @@ export function AdditionalFunction() {
                             <div className={"d-flex justify-content between gap-2 align-items-center"}>
                                 <i className="fa-brands fa-bluetooth"></i>
                                 <label>Bluetooth</label>
-                                <Checkbox car={car} field="functionsBluetooth"/>
+                                {functionsBluetooth.render()}
                             </div>
                             <div className={"d-flex justify-content between gap-2 align-items-center"}>
                                 <i className="fa-solid fa-map"></i>
                                 <label htmlFor="GPS">GPS</label>
-                                <Checkbox car={car} field="functionsGPS"/>
-
+                                {functionsGPS.render()}
                             </div>
                             <div className={"d-flex justify-content between gap-2 align-items-center"}>
                                 <i className="fa-solid fa-camera"></i>
                                 <label htmlFor="Camera">Camera</label>
-                                <Checkbox car={car} field="functionsCamera"/>
-
+                                {functionsCamera.render()}
                             </div>
                         </div>
                         <div>
                             <div className={"d-flex justify-content between gap-2 align-items-center"}>
                                 <i className="fa-solid fa-sun"></i>
                                 <label htmlFor="Sunroof">Sun roof</label>
-                                <Checkbox car={car} field="functionsSunRoof"/>
-
+                                {functionsSunRoof.render()}
                             </div>
                             <div className={"d-flex justify-content between gap-2 align-items-center"}>
                                 <i className="fa-solid fa-lock-open"></i>
                                 <label htmlFor="Child lock">Child lock</label>
-                                <Checkbox car={car} field="functionsChildLock"/>
-
+                                {functionsChildLock.render()}
                             </div>
                             <div className={"d-flex justify-content between gap-2 align-items-center"}>
                                 <i className="fa-solid fa-child-reaching"></i>
                                 <label htmlFor="Child seat">Child seat</label>
-                                <Checkbox car={car} field="functionsChildSeat"/>
+                                {functionsChildSeat.render()}
                             </div>
                         </div>
                         <div>
                             <div className={"d-flex justify-content between gap-2 align-items-center"}>
                                 <i className="fa-solid fa-compact-disc"></i>
                                 <label htmlFor="DVD">DVD</label>
-                                <Checkbox car={car} field="functionsDVD"/>
+                                {functionsDVD.render()}
                             </div>
                             <div className={"d-flex justify-content between gap-2 align-items-center"}>
                                 <i className="fa-brands fa-usb"></i>
                                 <label htmlFor="USB">USB</label>
-                                <Checkbox car={car} field="functionsUSB"/>
+                                {functionsUSB.render()}
                             </div>
                         </div>
                     </div>
