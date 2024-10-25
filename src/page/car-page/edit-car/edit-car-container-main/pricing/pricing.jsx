@@ -6,12 +6,17 @@ import {Checkbox} from "../common/checkbox/checkbox.jsx";
 
 
 export const Pricing = () => {
-const basePrice = BasePrice({car: consumeContext("car")})
-    console.log(basePrice);
+
+    // const basePrice = BasePrice({car: consumeContext("car")})
+    // console.log(basePrice);
 
     return cs(
         consumeContext("car"),
-        ({car}) => {
+        ["basePrice", ({car}, next) => BasePrice({car, next})],
+
+        ({basePrice}) => {
+            console.log(basePrice);
+
             return (
                 <div>
                     <form className={"pricing-123sa"}>
@@ -28,9 +33,10 @@ const basePrice = BasePrice({car: consumeContext("car")})
                             <div className={"d-flex flex-column  justify-content-between gap-3 my-5 fw-semibold"}>
                                 <div>
                                     {/*<BasePrice car={car}/>*/}
+                                    {basePrice.render()}
                                 </div>
                                 <div>
-                                    <RequiredDeposit car={car}/>
+                                    {/*<RequiredDeposit car={car}/>*/}
                                 </div>
                             </div>
                         </div>
@@ -39,24 +45,24 @@ const basePrice = BasePrice({car: consumeContext("car")})
                             <div className={"term-of-use-sad2"}>
                                 <div>
                                     <div>
-                                        <Checkbox car={car} field={"noSmoking"}/>
+                                        {/*<Checkbox car={car} field={"noSmoking"}/>*/}
                                         <label>No smoking</label>
 
                                     </div>
                                     <div>
-                                        <Checkbox car={car} field={"noPet"}/>
+                                        {/*<Checkbox car={car} field={"noPet"}/>*/}
                                         <label>No pets</label>
 
                                     </div>
                                 </div>
                                 <div>
                                     <div>
-                                        <Checkbox car={car} field={"noFoodInCar"}/>
+                                        {/*<Checkbox car={car} field={"noFoodInCar"}/>*/}
                                         <label>No food in cars</label>
 
                                     </div>
                                     <div>
-                                        <Checkbox car={car} field={"other"}/>
+                                        {/*<Checkbox car={car} field={"other"}/>*/}
                                         <label>Other</label>
 
                                     </div>
