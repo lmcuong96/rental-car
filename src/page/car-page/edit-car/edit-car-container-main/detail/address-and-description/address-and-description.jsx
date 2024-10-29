@@ -1,36 +1,51 @@
-export const AddressAndDescription = () => <>
-    <div className={"fw-bold col"}>
-        <p className={"fs-5"}>Adress: </p>
-        <div>
-            <label htmlFor="search-adress"></label>
-            <input  className={"w-100"} type="text" name="search-adress" id="search-adress" placeholder={"Search for an address"}/>
-        </div>
-        <div>
-            <select className={"w-100"} name="city" id="city">
-                <option value="Hanoi">Hanoi</option>
-                <option value="HoChiMinh">HoChiMinh</option>
-                <option value="Danang">Danang</option>
-            </select>
-        </div>
-        <div>
-            <select className={"w-100"} name="district" id="district">
-                <option value="Caugiay">Cau Giay</option>
-                <option value="Quan1">Quan 1</option>
-                <option value="Danang">Danang</option>
-            </select>
-        </div>
-        <div>
-            <select className={"w-100"} name="ward" id="ward">
-                <option value="Maidich">Maidich</option>
-                <option value="Quan1">Quan 1</option>
-                <option value="Danang">Danang</option>
-            </select>
-        </div>
-    </div>
-    <div className={"fw-bold col"}>
-        <div>
-            <p className={"fs-5"}>Description</p>
-            <textarea name="description" id="description" className={'w-100'} rows="10"></textarea>
-        </div>
-    </div>
-</>
+import {consumeContext, cs} from "cs-react";
+import {addressLine} from "./address-line/address-line.jsx";
+import {SelectLine} from "./select-line/select-line.jsx";
+
+export const AddressAndDescription = ({car, next}) => cs(
+    ['address', ({}, next) => addressLine({location: car.location, next})],
+    ['city', ({address}, next) => SelectLine({next, field: "city", value: ["Hanoi", "HoChiMinh", "DaNang"]})],
+    ['district', ({}, next) => SelectLine({next, field: "district", value: ["Caugiay", "Quan1", "Danang"]})],
+    ['ward', ({}, next) => SelectLine({next, field: "ward", value: ["Maidich", "Quan1", "Danang"]})],
+    ({address, city, district, ward}) => {
+        return next({
+
+            render: () => (
+                <>
+                    <div className={"fw-bold col"}>
+                        <p className={"fs-5"}>Address: </p>
+                        <div>
+                            {address.render()}
+                        </div>
+                        <div>
+                            {city.render()}
+                        </div>
+                        <div>
+                            {district.render()}
+                        </div>
+                        <div>
+                            {ward.render()}
+                        </div>
+                    </div>
+                    <div className={"fw-bold col"}>
+                        <div>
+                            <p className={"fs-5"}>Description</p>
+                            <textarea name="description" id="description" className={'w-100'} rows="10"></textarea>
+                        </div>
+                    </div>
+                </>
+            ),
+            // formControls: {
+            //     invalid: address.formControls.invalid,
+            //     showErrors: address.formControls.showErrors,
+            //     addData: address.formControls.addData
+            // },
+            value: {
+                address:address.value,
+                city:city.value,
+                district:district.value,
+                ward:ward.value
+            }
+        })
+    }
+)

@@ -1,0 +1,33 @@
+.mileage-and-fuel-123,
+.address-and-description-123 {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.mileage-and-fuel-123{
+  input{
+    border : 1px solid #000000;
+  }
+}
+.additional-function-123 {
+  width: 90%;
+}
+
+.additional-function-123 label {
+  font-size: 1.1rem;
+}
+
+.image-container-1123 {
+  width: 40%;
+  padding: 1rem 0;
+}
+
+.image-container-1123 img {
+  width: 100%;
+  height: auto;
+}
+
+.image-container-1123 p {
+  font-size: 1.5rem;
+}

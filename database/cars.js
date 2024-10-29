@@ -7,6 +7,7 @@ export const cars = [
         img1: "https://i.ex-cdn.com/vietnamfinance.vn/files/f1/news/ledinhnga/2020/11/5/Nissan-Navara-2021-5-2.jpg",
         img2: "https://i.ex-cdn.com/vietnamfinance.vn/files/f1/news/ledinhnga/2020/11/5/Nissan-Navara-2021-9-3.jpg",
         img3: "https://i.ex-cdn.com/vietnamfinance.vn/files/f1/news/ledinhnga/2020/11/5/VNF-Nissan-Navara-2021-ra-mat2.jpeg",
+        img4: null,
         licensePlates: "29A-2222",
         brandName: "Nissan",
         productionYear: 2021,
@@ -34,7 +35,7 @@ export const cars = [
         requiredDeposit: 2000,
         noSmoking: true,
         noPet: true,
-        noFoodInCar :false,
+        noFoodInCar: false,
         other: false
     },
     {
@@ -45,6 +46,7 @@ export const cars = [
         img1: "https://www.toyota.com.vn//Resources/Images/F8B33019CF708D9157E8B8F633DDB447.png",
         img2: "https://www.toyota.com.vn//Resources/Images/EAE5157BACA728E302C7A2DB2D10B178.jpg",
         img3: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        img4: null,
         licensePlates: "29A-2223",
         brandName: "Toyota",
         productionYear: 2023,
@@ -72,7 +74,7 @@ export const cars = [
         requiredDeposit: 7000,
         noSmoking: true,
         noPet: true,
-        noFoodInCar :false,
+        noFoodInCar: false,
         other: false
     },
     {
@@ -83,6 +85,7 @@ export const cars = [
         img1: "https://www.toyota.com.vn//Resources/Images/F8B33019CF708D9157E8B8F633DDB447.png",
         img2: "https://www.toyota.com.vn//Resources/Images/EAE5157BACA728E302C7A2DB2D10B178.jpg",
         img3: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        img4: null,
         licensePlates: "29A-2224",
         brandName: "Toyota",
         productionYear: 2024,
@@ -109,7 +112,7 @@ export const cars = [
         requiredDeposit: 2000,
         noSmoking: true,
         noPet: true,
-        noFoodInCar :false,
+        noFoodInCar: false,
         other: false
     },
     {
@@ -120,6 +123,7 @@ export const cars = [
         img1: "https://www.toyota.com.vn//Resources/Images/F8B33019CF708D9157E8B8F633DDB447.png",
         img2: "https://www.toyota.com.vn//Resources/Images/EAE5157BACA728E302C7A2DB2D10B178.jpg",
         img3: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        img4: null,
         licensePlates: "29A-2225",
         brandName: "Toyota",
         productionYear: 2025,
@@ -146,7 +150,7 @@ export const cars = [
         requiredDeposit: 2000,
         noSmoking: true,
         noPet: true,
-        noFoodInCar :false,
+        noFoodInCar: false,
         other: false
     },
 ]

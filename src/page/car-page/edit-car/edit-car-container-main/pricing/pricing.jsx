@@ -2,7 +2,7 @@ import "./pricing.scss";
 import {consumeContext, cs} from "cs-react";
 import {BasePrice} from "./base-price/base-price.jsx";
 import {RequiredDeposit} from "./required-deposit/required-deposit.jsx";
-import {Checkbox} from "../common/checkbox/checkbox.jsx";
+import {Checkbox} from "../../../common/checkbox/checkbox.jsx";
 
 
 export const Pricing = () => {
@@ -14,9 +14,8 @@ export const Pricing = () => {
         ['noSmoking', ({car}, next) => Checkbox({field: car.noSmoking, next})],
         ['noPets', ({car}, next) => Checkbox({field: car.noPet, next})],
         ['noFoodInCar', ({car}, next) => Checkbox({field: car.noFoodInCar, next})],
-        ['other', ({car}, next) => Checkbox({field: car.other,next})],
+        ['other', ({car}, next) => Checkbox({field: car.other, next})],
         ({basePrice, requiredDeposit, noSmoking, noPets, noFoodInCar, other}) => {
-            console.log(noSmoking);
             return (
                 <div>
                     <form className={"pricing-123sa"}>
@@ -67,7 +66,20 @@ export const Pricing = () => {
                         <div className={"d-flex justify-content-center "}>
                             <button type={"reset"} className={" fs-5 btn border border-white"}>Discard</button>
                             <button type={"submit"}
-                                    className={"fs-5 btn btn-primary border border-black rounded"}>Save
+                                    className={"fs-5 btn btn-primary border border-black rounded"}
+                                    onClick={() => {
+                                        alert(
+                                            JSON.stringify({
+                                                basePrice,
+                                                requiredDeposit,
+                                                noSmoking,
+                                                noPets,
+                                                noFoodInCar,
+                                                other
+                                            })
+                                        )
+                                    }}
+                            >Save
                             </button>
                         </div>
                     </form>

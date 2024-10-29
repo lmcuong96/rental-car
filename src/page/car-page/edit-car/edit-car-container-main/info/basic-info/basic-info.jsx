@@ -4,13 +4,13 @@ export const BasicInfo = () => cs(
     consumeContext("car"),
     ({car}) => (
         <>
-            <div className={"basic-info-left-xzc"}>
+            <div className={"basic-tab-info-left-xzc"}>
                 <p>License plates: <span>{car.licensePlates}</span></p>
                 <p>Brand name: <span>{car.brandName}</span></p>
                 <p>Production year: <span>{car.productionYear}</span></p>
                 <p>Transmission: <span>{car.transmission.toString()}</span></p>
             </div>
-            <div className={"basic-info-right-xzc"}>
+            <div className={"basic-tab-info-right-xzc"}>
                 <p>Color: <span>{car.color}</span></p>
                 <p>Model: <span>{car.model}</span></p>
                 <p>No. of seats: <span>{car.noOfSeats}</span></p>

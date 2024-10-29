@@ -17,7 +17,7 @@ export function PeopleSay() {
                                     <div
                                         className="progress"
                                         role="progressbar"
-                                        aria-label="Basic example"
+                                        aria-label="BasicTab example"
                                         aria-valuenow="25"
                                         aria-valuemin="0"
                                         aria-valuemax="25"
@@ -27,7 +27,7 @@ export function PeopleSay() {
                                     <div
                                         className="progress"
                                         role="progressbar"
-                                        aria-label="Basic example"
+                                        aria-label="BasicTab example"
                                         aria-valuenow="75"
                                         aria-valuemin="0"
                                         aria-valuemax="75"
@@ -37,7 +37,7 @@ export function PeopleSay() {
                                     <div
                                         className="progress"
                                         role="progressbar"
-                                        aria-label="Basic example"
+                                        aria-label="BasicTab example"
                                         aria-valuenow="100"
                                         aria-valuemin="0"
                                         aria-valuemax="100"
@@ -47,7 +47,7 @@ export function PeopleSay() {
                                     <div
                                         className="progress"
                                         role="progressbar"
-                                        aria-label="Basic example"
+                                        aria-label="BasicTab example"
                                         aria-valuenow="75"
                                         aria-valuemin="0"
                                         aria-valuemax="75"

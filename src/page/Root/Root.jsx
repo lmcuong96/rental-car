@@ -1,15 +1,15 @@
 import { Outlet } from "react-router-dom";
 import { Footer } from "./Footer/Footer.jsx";
 import { MainNavigation } from "./nav-bar/main-navigation.jsx";
-import { useLocation } from "react-router-dom";
+
 export function Root() {
     return (
-        <>
+        <div className="root-container">
             <MainNavigation />
-            <main>
+            <main className="content-xzcca">
                 <Outlet />
             </main>
             <Footer />
-        </>
+        </div>
     );
 }

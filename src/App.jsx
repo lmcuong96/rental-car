@@ -9,6 +9,7 @@ import { LoginAndSignup } from "./page/login-and-signup/login-and-signup.jsx";
 import { ResetPassword } from "./page/reset-password-page/ResetPassword.jsx";
 import {Search} from "./page/Search/search.jsx";
 import EditCar from "./page/car-page/edit-car/edit-car.jsx";
+import {AddCar} from "./page/car-page/add-car/add-car.jsx";
 
 
 function App() {
@@ -53,8 +54,12 @@ function App() {
                     element:<Search/>
                 },
                 {
-                    path:"edit-detail/:id",
+                    path:"edit-car/:id",
                     element:<EditCar/>
+                },
+                {
+                    path:"add-car",
+                    element:<AddCar/>
                 }
             ],
         },

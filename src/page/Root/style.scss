@@ -1,2 +1,12 @@
 $primary-color :#5f5e5e;
 $form-color :#8d8d8d;;
+.root-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-xzcca {
+  flex: 1;
+  padding: 20px;
+}
