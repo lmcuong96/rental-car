@@ -1,10 +1,9 @@
-import {cs, State} from "cs-react";
+import {cs} from "cs-react";
 import {Input} from "../../common/input/input.jsx";
 import './pricing-tab.scss'
 import {Checkbox} from "../../common/checkbox/checkbox.jsx";
 
 export const PricingTab = ({next}) => cs(
-    ['pricing', ({}, next) => State({initValue: "", next})],
     ['basePrice', (_, next) => Input({value: "", field: "basePrice", type: "number", next})],
     ['deposit', (_, next) => Input({value: "", field: "deposit", type: "number", next})],
     ['noSmoking', (_, next) => Checkbox({value: false, field: "noSmoking", next})],
@@ -12,12 +11,12 @@ export const PricingTab = ({next}) => cs(
     ['noFoodInCar', (_, next) => Checkbox({value: false, field: "noFoodInCar", next})],
     ['other', (_, next) => Checkbox({value: false, field: "other", next})],
     ({
-         pricing, basePrice, deposit, noSmoking,
+         basePrice, deposit, noSmoking,
          noPets,
          noFoodInCar,
          other,
      }) => next({
-        render: () => (<fieldset>
+        render: ({showErrors}) => (<fieldset>
                 <div className="tab-content pricing">
                     <div className="pricing-123sa">
 
@@ -29,11 +28,11 @@ export const PricingTab = ({next}) => cs(
 
                             <div className="w-75 d-flex flex-column gap-3 my-5">
                                 <div>
-                                    {basePrice.render()}
+                                    {basePrice.render({showErrors})}
                                     <span>VND/Day</span>
                                 </div>
                                 <div>
-                                    {deposit.render()}
+                                    {deposit.render({showErrors})}
                                     <span>VND</span>
                                 </div>
                             </div>
@@ -68,13 +67,11 @@ export const PricingTab = ({next}) => cs(
                 </div>
             </fieldset>
         ),
-        formControl: {
-            basePrice: basePrice.formControl.basePrice,
-            deposit: deposit.formControl.deposit,
-            noSmoking: noSmoking.value,
-            noPets: noPets.value,
-            noFoodInCar: noFoodInCar.value,
-            other: other.value
-        }
+        basePrice: basePrice.value,
+        deposit: deposit.value,
+        noSmoking: noSmoking.value,
+        noPets: noPets.value,
+        noFoodInCar: noFoodInCar.value,
+        other: other.value
     })
 )

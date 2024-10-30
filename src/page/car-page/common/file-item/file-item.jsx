@@ -4,10 +4,15 @@ import {cs, State} from "cs-react";
 const FileItem = ({label, file, next}) => cs(
     ['f', (_, next) => State({initValue: file, next})],
     ({f}) => {
-
+        const error = f.value ? null : "This field is required";
         return next({
-            render: () => <>
+            render: ({showErrors} = {}) => (<>
                 <p>{label}</p>
+                {showErrors && error && (
+                    <p className="fs-6 text-danger">
+                        {error}
+                    </p>
+                )}
                 {f.value ? (
                     <div className="image-container">
                         <img
@@ -30,14 +35,15 @@ const FileItem = ({label, file, next}) => cs(
                                 type: "file",
                                 id: label,
                                 onChange: (e) => {
-                                        f.onChange(e.target.files[0])
+                                    f.onChange(e.target.files[0])
                                 },
                             }}
                         />
+
                     </div>
                 )
                 }
-            </>,
+            </>),
             value: f.value
         })
     }

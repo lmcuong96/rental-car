@@ -38,7 +38,7 @@ export const BasicTab = ({next}) => cs(
          certificateOfInspection, insurance
      }) => {
         return next({
-            render: () => <fieldset>
+            render: ({showErrors}) => <fieldset>
                 <div className="step-content active">
                     <p className="text-danger">
                         Note: Please check your information carefully, you will not be able
@@ -51,12 +51,12 @@ export const BasicTab = ({next}) => cs(
                             <div className="col-md-6">
                                 <label className="form-label">License plate: <span
                                     className="text-danger">*</span></label>
-                                {licensePlates.render()}
+                                {licensePlates.render({showErrors})}
                             </div>
                             <div className="col-md-6">
                                 <label className="form-label">Color: <span
                                     className="text-danger">*</span></label>
-                                {color.render()}
+                                {color.render({showErrors})}
                             </div>
                         </div>
 
@@ -64,12 +64,12 @@ export const BasicTab = ({next}) => cs(
                             <div className="col-md-6">
                                 <label className="form-label">Brand name: <span
                                     className="text-danger">*</span></label>
-                                {brandName.render()}
+                                {brandName.render({showErrors})}
                             </div>
                             <div className="col-md-6">
                                 <label className="form-label">Model: <span
                                     className="text-danger">*</span></label>
-                                {model.render()}
+                                {model.render({showErrors})}
                             </div>
                         </div>
 
@@ -77,12 +77,12 @@ export const BasicTab = ({next}) => cs(
                             <div className="col-md-6">
                                 <label className="form-label">Production year: <span
                                     className="text-danger">*</span></label>
-                                {productionYear.render()}
+                                {productionYear.render({showErrors})}
                             </div>
                             <div className="col-md-6">
                                 <label className="form-label">No. of seats: <span
                                     className="text-danger">*</span></label>
-                                {noOfSeats.render()}
+                                {noOfSeats.render({showErrors})}
                             </div>
                         </div>
 
@@ -106,22 +106,22 @@ export const BasicTab = ({next}) => cs(
                         <p className="fs-4 fw-semibold">Documents:<span
                             className="text-danger">*</span></p>
                         <div className="row">
-                        {/*Registration paper*/}
+                            {/*Registration paper*/}
                             <div className="col-md-4">
                                 <div className={"file-container-123"}>
-                                    {registrationPaper.render()}
+                                    {registrationPaper.render({showErrors})}
                                 </div>
                             </div>
                             {/*Certificate of inspection*/}
                             <div className="col-md-4">
                                 <div className={'file-container-123'}>
-                                    {certificateOfInspection.render()}
+                                    {certificateOfInspection.render({showErrors})}
                                 </div>
                             </div>
                             {/*Insurance*/}
                             <div className="col-md-4">
                                 <div className={'file-container-123'}>
-                                    {insurance.render()}
+                                    {insurance.render({showErrors})}
                                 </div>
                             </div>
                         </div>
@@ -131,20 +131,17 @@ export const BasicTab = ({next}) => cs(
 
                 </div>
             </fieldset>,
-            formControl: {
-                licensePlates:  licensePlates.formControl.licensePlates,
-                brandName: brandName.formControl.brandName,
-                model: model.formControl.model,
-                color: color.formControl.color,
-                productionYear: productionYear.formControl.productionYear,
-                noOfSeats: noOfSeats.formControl.noOfSeats,
-                fuel: fuel.value,
-                transmission: transmission.value,
-                registrationPaper: registrationPaper.value,
-                certificateOfInspection: certificateOfInspection.value,
-                insurance: insurance.value
-            },
-
+            licensePlates: licensePlates.value,
+            brandName: brandName.value,
+            model: model.value,
+            color: color.value,
+            productionYear: productionYear.value,
+            noOfSeats: noOfSeats.value,
+            fuel: fuel.value,
+            transmission: transmission.value,
+            registrationPaper: registrationPaper.value,
+            certificateOfInspection: certificateOfInspection.value,
+            insurance: insurance.value
         })
     }
 )

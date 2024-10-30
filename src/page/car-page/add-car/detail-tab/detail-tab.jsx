@@ -10,7 +10,7 @@ export const DetailTab = ({next}) => cs(
     ['fuelConsumption', (_, next) => Input({value: "", field: "fuelConsumption", type: "number", next})],
     ['address', (_, next) => Input({value: "", field: "address", type: "text", next})],
     ['description', (_, next) => Textarea({value: "", field: "description", row: 10, next})],
-    ['functionsBluetooth', (_, next) => Checkbox({field: "functionsBluetooth", value:false, next})],
+    ['functionsBluetooth', (_, next) => Checkbox({field: "functionsBluetooth", value: false, next})],
     ['functionsGPS', (_, next) => Checkbox({field: "functionsGPS", value: false, next})],
     ['functionsCamera', (_, next) => Checkbox({field: "functionsCamera", value: false, next})],
     ['functionsSunRoof', (_, next) => Checkbox({field: "functionsSunRoof", value: false, next})],
@@ -36,12 +36,8 @@ export const DetailTab = ({next}) => cs(
          imageLeftFile,
          imageRightFile,
      }) => {
-        // console.log("imageFrontFile:", imageFrontFile.value);
-        // console.log("imageBackFile:", imageBackFile.value);
-        // console.log("imageLeftFile:", imageLeftFile.value);
-        // console.log("imageRightFile:", imageRightFile.value);
         return next({
-            render: () => (
+            render: ({showErrors}) => (
                 <fieldset>
                     <div className="tab-detail detail">
                         <div className="detail-123"
@@ -50,15 +46,15 @@ export const DetailTab = ({next}) => cs(
                                 <div className="d-flex flex-column fw-bold col">
                                     <label className="fs-5">Mileage: <span
                                         className="text-danger">*</span></label>
-                                    {mileage.render()}
+                                    {mileage.render({showErrors})}
                                 </div>
                                 <div className="d-flex flex-column fw-bold col">
-                                    <label className="fs-5">Fuel consumption: </label>
+                                    <label className="fs-5">Fuel consumption: <span
+                                        className="text-danger">*</span> </label>
                                     <div>
-                                        {fuelConsumption.render()}
+                                        {fuelConsumption.render({showErrors})}
                                         <span> liter/100km</span>
                                     </div>
-
                                 </div>
                             </div>
 
@@ -66,7 +62,7 @@ export const DetailTab = ({next}) => cs(
                                 <div className="fw-bold col">
                                     <label className="fs-5">Address: <span
                                         className="text-danger">*</span></label>
-                                    {address.render()}
+                                    {address.render({showErrors})}
                                 </div>
                                 <div className="fw-bold col">
                                     <label className="fs-5">Description</label>
@@ -131,22 +127,22 @@ export const DetailTab = ({next}) => cs(
                                 <div>
                                     <div className="image-sad1">
                                         <div className="image-container-1123">
-                                            {imageFrontFile.render()}
+                                            {imageFrontFile.render({showErrors})}
                                         </div>
 
                                         {/*Back Image Container*/}
                                         <div className="image-container-1123">
-                                            {imageBackFile.render()}
+                                            {imageBackFile.render({showErrors})}
                                         </div>
 
                                         {/*Left Image Container*/}
                                         <div className="image-container-1123">
-                                            {imageLeftFile.render()}
+                                            {imageLeftFile.render({showErrors})}
                                         </div>
 
                                         {/*Right Image Container*/}
                                         <div className="image-container-1123">
-                                            {imageRightFile.render()}
+                                            {imageRightFile.render({showErrors})}
                                         </div>
                                     </div>
                                 </div>
@@ -160,24 +156,22 @@ export const DetailTab = ({next}) => cs(
                     </div>
                 </fieldset>
             ),
-            formControl: {
-                mileage: mileage.formControl.mileage,
-                fuelConsumption: fuelConsumption.formControl.fuelConsumption,
-                address: address.formControl.address,
-                description: description.value,
-                functionsBluetooth: functionsBluetooth.value,
-                functionsGPS: functionsGPS.value,
-                functionsCamera: functionsCamera.value,
-                functionsSunRoof: functionsSunRoof.value,
-                functionsChildLock: functionsChildLock.value,
-                functionsChildSeat: functionsChildSeat.value,
-                functionsDvd: functionsDvd.value,
-                functionsUSB: functionsUSB.value,
-                imageFrontFile: imageFrontFile.value,
-                imageBackFile: imageBackFile.value,
-                imageLeftFile: imageLeftFile.value,
-                imageRightFile: imageRightFile.value,
-            }
+            mileage: mileage.value,
+            fuelConsumption: fuelConsumption.value,
+            address: address.value,
+            description: description.value,
+            functionsBluetooth: functionsBluetooth.value,
+            functionsGPS: functionsGPS.value,
+            functionsCamera: functionsCamera.value,
+            functionsSunRoof: functionsSunRoof.value,
+            functionsChildLock: functionsChildLock.value,
+            functionsChildSeat: functionsChildSeat.value,
+            functionsDvd: functionsDvd.value,
+            functionsUSB: functionsUSB.value,
+            imageFrontFile: imageFrontFile.value,
+            imageBackFile: imageBackFile.value,
+            imageLeftFile: imageLeftFile.value,
+            imageRightFile: imageRightFile.value,
         })
     }
 )

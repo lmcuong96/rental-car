@@ -3,25 +3,30 @@ import {cs, State} from "cs-react";
 export const SelectOption = ({next, value, field}) => cs(
     ['option', (_, next) => State({initValue: value, next})],
     ({option}) => {
+
+        const error = !Array.isArray(option.value)  ? null : "This field is required";
         return next({
-            render: () => (
-                <select {...{
-                    className: "form-select",
-                    id: field,
-                    option: option.value,
-                    onChange: (e) => {
-                        const selectedValue = e.target.value;
-                        option.onChange(selectedValue);
-                    }
-                }}>
-                    {value?.map((v) => <option key={v} value={v}>{v}</option>)}
-                </select>
+            render: ({showErrors} = {}) => (
+                <>
+                    <select {...{
+                        className: "form-select",
+                        id: field,
+                        option: option.value,
+                        onChange: (e) => {
+                            const selectedValue = e.target.value;
+                            option.onChange(selectedValue);
+                        }
+                    }}>
+                        {value?.map((v) => <option key={v} value={v}>{v}</option>)}
+                    </select>
+                    {showErrors && error && (
+                        <p className="text-danger">
+                            {error}
+                        </p>
+                    )}
+                </>
             ),
-            formControl: {
-                invalid: Array.isArray(option.value) || option.value.includes("Select"),
-                showErrors: `${field} is required`,
-                [field]: option.value
-            },
+            value: option.value
         })
     }
 )
