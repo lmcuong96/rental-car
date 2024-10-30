@@ -44,7 +44,8 @@ const FileItem = ({label, file, next}) => cs(
                 )
                 }
             </>),
-            value: f.value
+            value: f.value,
+            invalid: error
         })
     }
 );

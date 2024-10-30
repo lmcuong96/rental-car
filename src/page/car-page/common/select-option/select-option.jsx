@@ -4,7 +4,7 @@ export const SelectOption = ({next, value, field}) => cs(
     ['option', (_, next) => State({initValue: value, next})],
     ({option}) => {
 
-        const error = !Array.isArray(option.value)  ? null : "This field is required";
+        const error = Array.isArray(option.value)  ?  "This field is required" : null
         return next({
             render: ({showErrors} = {}) => (
                 <>
@@ -26,7 +26,8 @@ export const SelectOption = ({next, value, field}) => cs(
                     )}
                 </>
             ),
-            value: option.value
+            value: option.value,
+            invalid: error
         })
     }
 )

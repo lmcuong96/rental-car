@@ -72,6 +72,8 @@ export const PricingTab = ({next}) => cs(
         noSmoking: noSmoking.value,
         noPets: noPets.value,
         noFoodInCar: noFoodInCar.value,
-        other: other.value
+        other: other.value,
+        invalid: basePrice.invalid !== null
+            || deposit.invalid !== null
     })
 )

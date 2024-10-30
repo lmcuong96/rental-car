@@ -127,8 +127,6 @@ export const BasicTab = ({next}) => cs(
                         </div>
                         <p className="text-muted mt-3">File type: doc, docx, pdf, jpg, jpeg, png</p>
                     </div>
-
-
                 </div>
             </fieldset>,
             licensePlates: licensePlates.value,
@@ -141,7 +139,17 @@ export const BasicTab = ({next}) => cs(
             transmission: transmission.value,
             registrationPaper: registrationPaper.value,
             certificateOfInspection: certificateOfInspection.value,
-            insurance: insurance.value
+            insurance: insurance.value,
+            invalid:
+                licensePlates.invalid !== null
+                || brandName.invalid !== null
+                || model.invalid !== null
+                || color.invalid !== null
+                || productionYear.invalid !== null
+                || noOfSeats.invalid !== null
+                || registrationPaper.invalid !== null
+                || certificateOfInspection.invalid !== null
+                || insurance.invalid !== null
         })
     }
 )

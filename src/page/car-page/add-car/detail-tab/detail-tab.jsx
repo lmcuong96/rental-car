@@ -172,6 +172,14 @@ export const DetailTab = ({next}) => cs(
             imageBackFile: imageBackFile.value,
             imageLeftFile: imageLeftFile.value,
             imageRightFile: imageRightFile.value,
+            invalid:
+                mileage.invalid !== null
+                || fuelConsumption.invalid !== null
+                || address.invalid !== null
+                || imageFrontFile.invalid !== null
+                || imageBackFile.invalid !== null
+                || imageLeftFile.invalid !== null
+                || imageRightFile.invalid !== null
         })
     }
 )

@@ -5,7 +5,7 @@ export const Input = ({next, value, field, type}) => cs(
     ({input}) => {
         const error = input.value?.length ? null : "This field is required";
         return next({
-            render: ({showErrors}={}) => (<>
+            render: ({showErrors} = {}) => (<>
                 <input {...{
                     className: "w-100",
                     id: field,
@@ -19,7 +19,8 @@ export const Input = ({next, value, field, type}) => cs(
                     </p>
                 )}
             </>),
-                value: input.value
+            value: input.value,
+            invalid: error
         })
     }
 )

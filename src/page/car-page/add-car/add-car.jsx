@@ -66,7 +66,7 @@ export const AddCar = () => cs(
         next
     })],
     ({basicTab, detailTab, pricingTab, finishTab,}) => {
-
+        console.log("pricingTab invalid: " + pricingTab.invalid);
         const miniNav = [
             {content: "Home", link: "/cars"},
             {content: "My Car", link: "/my-cars"},
@@ -89,7 +89,7 @@ export const AddCar = () => cs(
             <div className="my-3">
                 <ul className="nav nav-pills justify-content-between step-nav">
                     <li className="nav-item col">
-                        <a className="nav-link active" data-bs-toggle="pill" href="#step1" >Step 1: Basic</a>
+                        <a className="nav-link active" data-bs-toggle="pill" href="#step1">Step 1: Basic</a>
                     </li>
                     <li className="nav-item col">
                         <a className="nav-link" data-bs-toggle="pill" href="#step2">Step 2: Details</a>
@@ -104,7 +104,7 @@ export const AddCar = () => cs(
 
                 <div className="tab-content mt-4">
                     {cs(
-                        ["showErrors", (_, next) => State({initValue: false,next})],
+                        ["showErrors", (_, next) => State({initValue: false, next})],
                         ({showErrors}) => (
                             <div className="tab-pane fade show active step" id="step1">
                                 {/*Step 1: BasicTab*/}
@@ -116,9 +116,8 @@ export const AddCar = () => cs(
                                             type="button">Cancel
                                     </button>
                                     <button className="btn btn-primary nextBtn"
-                                            disabled={showErrors.value === !showErrors.value}
                                             onClick={() => {
-                                                if (showErrors.value === true) {
+                                                if (basicTab.invalid === false) {
                                                     handleClick("step2")
                                                 } else showErrors.onChange(true)
                                             }}
@@ -145,7 +144,7 @@ export const AddCar = () => cs(
                                     <button
                                         className="btn btn-primary nextBtn"
                                         onClick={() => {
-                                            if (showErrors.value === true) {
+                                            if (detailTab.invalid === false) {
                                                 handleClick("step3");
                                             } else showErrors.onChange(true);
                                         }}
@@ -173,7 +172,7 @@ export const AddCar = () => cs(
                                         <button
                                             className="btn btn-primary nextBtn"
                                             onClick={() => {
-                                                if (showErrors.value === true) {
+                                                if (pricingTab.invalid === false) {
                                                     handleClick("step4");
                                                 } else showErrors.onChange(true);
                                             }}
