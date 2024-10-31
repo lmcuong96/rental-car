@@ -49,10 +49,10 @@ function App() {
                     path: "forgotpassword",
                     element: <ResetPassword />,
                 },
-                {
-                    path:"search",
-                    element:<Search/>
-                },
+                // {
+                //     path:"search",
+                //     element:<Search/>
+                // },
                 {
                     path:"edit-car/:id",
                     element:<EditCar/>

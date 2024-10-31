@@ -3,10 +3,10 @@ import {addressLine} from "./address-line/address-line.jsx";
 import {SelectLine} from "./select-line/select-line.jsx";
 
 export const AddressAndDescription = ({car, next}) => cs(
-    ['address', ({}, next) => addressLine({location: car.location, next})],
+    ['address', (_, next) => addressLine({location: car.address, next})],
     ['city', ({address}, next) => SelectLine({next, field: "city", value: ["Hanoi", "HoChiMinh", "DaNang"]})],
-    ['district', ({}, next) => SelectLine({next, field: "district", value: ["Caugiay", "Quan1", "Danang"]})],
-    ['ward', ({}, next) => SelectLine({next, field: "ward", value: ["Maidich", "Quan1", "Danang"]})],
+    ['district', (_, next) => SelectLine({next, field: "district", value: ["Caugiay", "Quan1", "Danang"]})],
+    ['ward', (_, next) => SelectLine({next, field: "ward", value: ["Maidich", "Quan1", "Danang"]})],
     ({address, city, district, ward}) => {
         return next({
 

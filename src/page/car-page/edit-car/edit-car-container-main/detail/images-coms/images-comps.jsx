@@ -7,22 +7,22 @@ export const ImagesComps = ({next}) => {
         consumeContext("car"),
         ["frontImg", ({car}, next) => FileItem({
             label: "Front",
-            file: car.img1,
+            file: car.imageFront,
             next,
         }),],
         ["backImg", ({car}, next) => FileItem({
             label: "Back",
-            file: car.img2,
+            file: car.imageBack,
             next,
         }),],
         ["leftImg", ({car}, next) => FileItem({
             label: "Left",
-            file: car.img3,
+            file: car.imageLeft,
             next,
         }),],
         ["rightImg", ({car}, next) => FileItem({
             label: "Right",
-            file: car.img4,
+            file: car.imageRight,
             next,
         }),],
         ({
@@ -32,7 +32,6 @@ export const ImagesComps = ({next}) => {
             console.log("backImg:" + backImg.value);
             console.log("leftImg:" + leftImg.value);
             console.log("rightImg:" + rightImg.value);
-
             return next({
                 render: () => (
                     <>

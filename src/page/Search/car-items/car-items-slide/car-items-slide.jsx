@@ -1,6 +1,6 @@
 export const CarItemsSlide = () => {
     return {
-        render: ({ img1, img2, img3, carouselId }) => {  // Thêm carouselId để đảm bảo id duy nhất
+        render: ({car, carouselId }) => {  // Thêm carouselId để đảm bảo id duy nhất
             return (
                 <div id={carouselId} className="carousel slide col" data-bs-ride="carousel">
                     <div className="carousel-indicators">
@@ -13,17 +13,17 @@ export const CarItemsSlide = () => {
                     </div>
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                            <img className="d-block w-100" src={img1}
+                            <img className="d-block w-100" src={car.imageFront}
                                  alt="First slide"/>
                         </div>
                         <div className="carousel-item">
                             <img className="d-block w-100"
-                                 src={img2}
+                                 src={car.imageBack}
                                  alt="Second slide"/>
                         </div>
                         <div className="carousel-item">
                             <img className="d-block w-100"
-                                 src={img3}
+                                 src={car.imageLeft}
                                  alt="Third slide"/>
                         </div>
                     </div>

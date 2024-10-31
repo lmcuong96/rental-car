@@ -11,10 +11,10 @@ export const Pricing = () => {
         consumeContext("car"),
         ["basePrice", ({car}, next) => BasePrice({car, next})],
         ['requiredDeposit', ({car}, next) => RequiredDeposit({car, next})],
-        ['noSmoking', ({car}, next) => Checkbox({field: car.noSmoking, next})],
-        ['noPets', ({car}, next) => Checkbox({field: car.noPet, next})],
-        ['noFoodInCar', ({car}, next) => Checkbox({field: car.noFoodInCar, next})],
-        ['other', ({car}, next) => Checkbox({field: car.other, next})],
+        ['noSmoking', ({car}, next) => Checkbox({value: car.noSmoking, field: "noSmoking", next})],
+        ['noPets', ({car}, next) => Checkbox({value: car.noPet, field: "noPet", next})],
+        ['noFoodInCar', ({car}, next) => Checkbox({value: car.noFoodInCar, field: "noFoodInCar", next})],
+        ['other', ({car}, next) => Checkbox({value: car.other, field: "other", next})],
         ({basePrice, requiredDeposit, noSmoking, noPets, noFoodInCar, other}) => {
             return (
                 <div>

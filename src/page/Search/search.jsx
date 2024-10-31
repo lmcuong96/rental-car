@@ -11,7 +11,7 @@ export function Search() {
 
     const selectOption = SelectOption();
 
-    const carItems = CarItems();
+    // const carItems = CarItems();
     const pagination = Pagination();
 
     const miniNav = [
@@ -35,8 +35,8 @@ export function Search() {
                     {selectOption.render()}
                 </div>
                 {/*Car - items*/}
-                {cars.map((items,) => <div key={items.id}
-                                           className={"car-items-container-435"}>{carItems.render(items)}</div>)}
+                {/*{cars.map((items,) => <div key={items.id}*/}
+                {/*                           className={"car-items-container-435"}>{carItems.render(items)}</div>)}*/}
 
                 <div>
                     {pagination.render()}

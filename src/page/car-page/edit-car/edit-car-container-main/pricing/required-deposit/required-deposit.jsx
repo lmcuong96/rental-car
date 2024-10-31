@@ -1,7 +1,7 @@
 import {bindInput, cs, State} from "cs-react";
 
 export const RequiredDeposit = ({car, next}) => cs(
-    ["requiredDeposit", ({}, next) => State({initValue: car.requiredDeposit, next})],
+    ["requiredDeposit", ({}, next) => State({initValue: car.deposit, next})],
     ({requiredDeposit}) => next(
         {
             render: () => (<>

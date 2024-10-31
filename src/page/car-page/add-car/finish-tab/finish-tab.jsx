@@ -8,7 +8,7 @@ export const FinishTab = (
         next,
     }
 ) => cs(
-    ({}) => {
+    (_) => {
         const handleClick = () => {
             console.table(formControl);
         }

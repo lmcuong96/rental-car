@@ -6,3 +6,12 @@
     position: relative;
     margin: 0 30px;
 }
+.btn-header-zxc {
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+    padding: 8px 20px;
+    color: #ffffff;
+    border-radius: 5px;
+}
+

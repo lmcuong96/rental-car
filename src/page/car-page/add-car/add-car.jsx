@@ -7,7 +7,6 @@ import {PricingTab} from "./pricing-tab/pricing-tab.jsx";
 import {FinishTab} from "./finish-tab/finish-tab.jsx";
 
 export const AddCar = () => cs(
-    // (_, next) => State({initValue: "", next}),
     ['basicTab', (_, next) => BasicTab({next})],
     ['detailTab', (_, next) => DetailTab({next})],
     ['pricingTab', (_, next) => PricingTab({next})],

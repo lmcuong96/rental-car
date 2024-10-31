@@ -1,5 +1,6 @@
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import style from "./header-for-guest.module.css";
+
 export function HeaderForGuest() {
     const navigate = useNavigate();
     return (
@@ -12,7 +13,7 @@ export function HeaderForGuest() {
                     prices!
                 </p>
                 <button
-                    className="btn btn-primary"
+                    className={"btn-primary " + style['btn-header-zxc']}
                     onClick={() => navigate("/customer")}
                 >
                     Find a Rental Car Near You
@@ -25,9 +26,9 @@ export function HeaderForGuest() {
                     List your car and make money from your asset
                 </p>
                 <button
-                    className="btn btn-primary"
+                    className={"btn-primary " + style['btn-header-zxc']}
                     onClick={() => {
-                        navigate("/car-owner");
+                        navigate("/cars-owner");
                     }}
                 >
                     List Your Car Today
